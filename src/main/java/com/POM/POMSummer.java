@@ -11,6 +11,8 @@ public class POMSummer {
 	private FromPOM fromPOM;
 	
 	private searchadult searchPOM;
+	
+	private departure depPom;
 
 	
 	public FromPOM getFromPOM() {
@@ -27,6 +29,13 @@ public class POMSummer {
 		return searchPOM;
 	}
 	
+	public departure getdeparture() {
+		if(depPom==null) {
+			depPom = new departure(driver);
+			
+		}
+		return depPom;
+	}
 	
 	
 }

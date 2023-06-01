@@ -1,6 +1,8 @@
 package com.Runner;
 
+import org.apache.hc.core5.reactor.Command.Priority;
 import org.testng.Assert;
+
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
@@ -29,21 +31,31 @@ public class GoibiboRunner extends BaseClass {
 		mouseClick(p.getFromPOM().getChennai());
 	}
 	
-
+	
+	
 	@Test(priority =3)
+	public void departuretab() throws InterruptedException {
+		Thread.sleep(3000);
+		clickOnElement(p.getdeparture().getDeparture());
+		clickOnElement(p.getdeparture().getDate());
+		clickOnElement(p.getdeparture().getDone());
+		Assert.assertTrue(p.getdeparture().getSunday().isDisplayed());
+	}
+
+	@Test(priority =4)
 	public void adulttab() throws InterruptedException {
 		if(p.getsearchPOM().getAdulttab().isDisplayed()) {
 		clickOnElement(p.getsearchPOM().getAdulttab());
 		Thread.sleep(2000);
 		}
 	}
-	@Test(priority=4 )
+	@Test(priority=5 )
 	public void plusbutton() {
 		for(int i=1;i<=3;i++) {
 		mouseClick(p.getsearchPOM().getPlusbutton());
 		}
 	}
-	@Test(priority =5)
+	@Test(priority =6)
 	public void donebutton() throws InterruptedException {
 		if(p.getsearchPOM().getDoneb().isDisplayed()) {
 		clickOnElement(p.getsearchPOM().getDoneb());
