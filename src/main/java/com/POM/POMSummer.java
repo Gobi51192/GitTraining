@@ -9,6 +9,8 @@ public class POMSummer {
 		driver=dri;
 	}
 	private FromPOM fromPOM;
+	
+	private searchadult searchPOM;
 
 	
 	public FromPOM getFromPOM() {
@@ -16,6 +18,13 @@ public class POMSummer {
 		fromPOM=new FromPOM(driver);
 		}
 		return fromPOM;
+	}
+	
+	public searchadult getsearchPOM() {
+		if(searchPOM==null) {
+		searchPOM=new searchadult(driver);
+		}
+		return searchPOM;
 	}
 	
 	

@@ -30,4 +30,25 @@ public class GoibiboRunner extends BaseClass {
 	}
 	
 
+	@Test(priority =3)
+	public void adulttab() throws InterruptedException {
+		if(p.getsearchPOM().getAdulttab().isDisplayed()) {
+		clickOnElement(p.getsearchPOM().getAdulttab());
+		Thread.sleep(2000);
+		}
+	}
+	@Test(priority=4 )
+	public void plusbutton() {
+		for(int i=1;i<=3;i++) {
+		mouseClick(p.getsearchPOM().getPlusbutton());
+		}
+	}
+	@Test(priority =5)
+	public void donebutton() throws InterruptedException {
+		if(p.getsearchPOM().getDoneb().isDisplayed()) {
+		clickOnElement(p.getsearchPOM().getDoneb());
+		Thread.sleep(4000);
+		}
+	}
+
 }
